@@ -1,0 +1,318 @@
+:root {
+  --Verydarkcyan: hsl(183, 100%, 15%);
+  --Darkgrayishcyan: hsl(186, 14%, 43%);
+  --Grayishcyan: hsl(184, 14%, 56%);
+  --Lightgrayishcyan: hsl(185, 41%, 84%);
+  --Verylightgrayishcyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --Strongcyan: hsl(172, 67%, 45%);
+  @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Lightgrayishcyan);
+  margin: 0;
+  row-gap: 5rem;
+
+  main {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 44rem;
+    height: 23rem;
+    background-color: var(--White);
+    .tip {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem;
+      .bill-container {
+        position: relative;
+        width: 100%;
+        .bill-section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 1rem;
+          p {
+            color: var(--Darkgrayishcyan);
+            font-weight: 700;
+          }
+          .bill-error {
+            display: none;
+            color: red;
+          }
+        }
+        input {
+          width: 100%;
+          height: 2rem;
+          text-align: end;
+          padding: 1rem 1rem;
+          height: 2rem;
+          background-color: var(--Verylightgrayishcyan);
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: var(--Verydarkcyan);
+          border: none;
+          border-radius: 0.5rem;
+          box-sizing: border-box;
+        }
+        input:focus {
+          outline: none;
+          border: 2px solid var(--Strongcyan) !important;
+        }
+
+        .bill-placeholder {
+          position: absolute;
+          top: 3.5rem;
+          left: 1rem;
+        }
+      }
+      .button {
+        display: flex;
+        flex-direction: column;
+        .tip-section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            color: var(--Darkgrayishcyan);
+            font-weight: 700;
+          }
+          .select-error {
+            color: red;
+            display: none;
+          }
+        }
+        .button-group {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          width: 100%;
+          height: auto;
+
+          gap: 0.5rem;
+          font-family: "Space Mono", monospace;
+          button {
+            width: 6rem;
+            height: 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background-color: var(--Verydarkcyan);
+            color: var(--White);
+            border-radius: 0.2rem;
+            border: none;
+          }
+          button:hover {
+            cursor: pointer;
+          }
+          input {
+            width: 6rem;
+            height: 2.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--Verydarkcyan);
+            background-color: var(--Verylightgrayishcyan);
+            border: none;
+            border-radius: 0.2rem;
+            text-align: end;
+          }
+          input:hover {
+            cursor: pointer;
+          }
+          input::placeholder {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--Darkgrayishcyan);
+            text-align: center;
+          }
+          input:focus {
+            outline: none;
+            border: 2px solid var(--Strongcyan) !important;
+          }
+          .selected {
+            background-color: var(--Strongcyan);
+            color: var(--Verydarkcyan);
+          }
+        }
+      }
+      .people-input {
+        width: 100%;
+        .labels {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            margin-bottom: 0.2rem;
+            color: var(--Darkgrayishcyan);
+            font-weight: 700;
+          }
+          .not-zero {
+            display: none;
+            color: red;
+          }
+        }
+        .peoples {
+          position: relative;
+          .people-logo {
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+          }
+          input {
+            width: 100%;
+            height: 2rem;
+            text-align: end;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--Verydarkcyan);
+            padding: 1rem;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 0.2rem;
+            background-color: var(--Verylightgrayishcyan);
+          }
+          input:focus {
+            outline: none;
+            border: 2px solid var(--Strongcyan) !important;
+          }
+        }
+      }
+    }
+    .tip-amount {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      padding-right: 2rem;
+
+      flex: 1;
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 90%;
+        border-radius: 1rem;
+        padding: 2rem;
+        background-color: var(--Verydarkcyan);
+
+        row-gap: 1rem;
+        .display {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-evenly;
+          gap: 2rem;
+          .tip-person {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+
+            .discription {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              p:first-child {
+                margin: 0px;
+                color: var(--White);
+              }
+              p:last-child {
+                margin: 0px;
+                color: var(--Grayishcyan);
+              }
+            }
+            .output-tip {
+              color: var(--Strongcyan);
+              font-size: 2rem;
+              font-weight: 700;
+              p {
+                margin: 0;
+              }
+            }
+          }
+          .total {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 3rem;
+            .discription {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              p:first-child {
+                margin: 0px;
+                color: var(--White);
+              }
+              p:last-child {
+                margin: 0px;
+                color: var(--Grayishcyan);
+              }
+            }
+            .output-total {
+              color: var(--Strongcyan);
+              font-size: 2rem;
+              font-weight: 700;
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+        .reset {
+          border: none;
+          background-color: var(--Strongcyan);
+          color: var(--Verydarkcyan);
+          font-size: 1.2rem;
+          width: 100%;
+          height: 2.5rem;
+          font-weight: 700;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0;
+    height: 100%;
+    row-gap: 1rem;
+    main {
+      height: auto;
+      width: 100%;
+      flex-direction: column;
+      .tip-amount {
+        padding: 1rem;
+      }
+    }
+  }
+}

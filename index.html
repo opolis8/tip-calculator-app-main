@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
+    <main>
+      <div class="tip">
+        <div class="bill-container">
+          <div class="bill-section">
+            <p>bill</p>
+            <p class="bill-error">input-bill</p>
+          </div>
+
+          <input type="number" name="bill" id="bill" placeholder="0" />
+          <label for="bill" class="bill-placeholder"
+            ><img src="./images/icon-dollar.svg" alt="dollar-sign"
+          /></label>
+        </div>
+        <div class="button">
+          <div class="tip-section">
+            <p>Select Tips %</p>
+            <p class="select-error">Select or Input</p>
+          </div>
+          <div class="button-group">
+            <button
+              class="select-button"
+              data-selected="5"
+              onclick="selectButton(1, 5)"
+            >
+              5%
+            </button>
+            <button
+              class="select-button"
+              data-selected="10"
+              onclick="selectButton(2, 10)"
+            >
+              10%
+            </button>
+            <button
+              class="select-button"
+              data-selected="15"
+              onclick="selectButton(3, 15)"
+            >
+              15%
+            </button>
+            <button
+              class="select-button"
+              data-selected="25"
+              onclick="selectButton(4, 25)"
+            >
+              25%
+            </button>
+            <button
+              class="select-button"
+              data-selected="50"
+              onclick="selectButton(5, 50)"
+            >
+              50%
+            </button>
+
+            <input type="number" placeholder="Custom" class="custom" />
+          </div>
+        </div>
+        <div class="people-input">
+          <div class="labels">
+            <p>Number of People</p>
+            <p class="not-zero">Can't be zero</p>
+          </div>
+
+          <div class="peoples">
+            <label for="people" class="people-logo"
+              ><img src="./images/icon-person.svg" alt=""
+            /></label>
+            <input type="number" name="people" id="people" placeholder="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-amount">
+        <div class="container">
+          <div class="display">
+            <div class="tip-person">
+              <div class="discription">
+                <p>Tip Amount</p>
+                <p>/ person</p>
+              </div>
+              <div class="output-tip"><p>$0.00</p></div>
+            </div>
+            <div class="total">
+              <div class="discription">
+                <p>Total</p>
+                <p>/ person</p>
+              </div>
+              <div class="output-total"><p>$0.00</p></div>
+            </div>
+          </div>
+
+          <button class="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kim Edward Oclida</a>.
+    </div>
+  </body>
+  <script src="./src/js/index.js"></script>
+</html>

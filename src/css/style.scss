@@ -1,6 +1,6 @@
 :root {
-  --Verydarkcyan: hsl(183, 100%, 15%);
-  --Darkgrayishcyan: hsl(186, 14%, 43%);
+  --Verydarkcyan: rgb(0, 73, 77);
+  --Darkgrayishcyan: #5e7a7d;
   --Grayishcyan: hsl(184, 14%, 56%);
   --Lightgrayishcyan: hsl(185, 41%, 84%);
   --Verylightgrayishcyan: hsl(189, 41%, 97%);
@@ -31,6 +31,7 @@ body {
     width: 44rem;
     height: 23rem;
     background-color: var(--White);
+    box-shadow: 0px 1px 19px -2px rgba(94, 122, 125, 0.65);
     .tip {
       flex: 1;
       display: flex;
